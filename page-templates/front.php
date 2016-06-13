@@ -7,7 +7,7 @@ get_header(); ?>
 <header id="front-hero" role="banner">
 	<div class="marketing">
 		<div class="tagline">
-			<h1><?php bloginfo( 'name' ); ?></h1>
+			<h1>Hebden <span class="secondary">Handyman</span></h1>
 			<h4 class="subheader"><?php bloginfo( 'description' ); ?></h4>
 		</div>
 
