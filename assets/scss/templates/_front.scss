@@ -6,93 +6,46 @@
 	}
 
 	@include breakpoint(small) {
-		background: url('../images/demo/hero-bg-foundation-6-small.svg') bottom center;
+		background: url('../images/header-bk.jpg') bottom center;
 		background-size: cover;
 		background-position: bottom;
 		padding: rem-calc(65%) 0;
-		margin: 0 0 rem-calc(32);
+		margin: 0;
 		height: auto;
 		position: relative;
 		text-align: left;
 	}
 
 	@include breakpoint(medium) {
-		background: url('../images/demo/hero-bg-foundation-6-large.svg') bottom center;
+		background: url('../images/header-bk.jpg') bottom center;
 		background-size: cover;
 		background-position: center;
-		height: rem-calc(685);
-		margin: 0 0 rem-calc(72);
-	}
-
-	#watch {
-
-		@include breakpoint(small) {
-			@include grid-column(7);
-			@include grid-column-position(-5);
-		}
-
-		@include breakpoint(medium) {
-			@include grid-column(12);
-			@include grid-column-position(0);
-		}
-
-		section {
-			display: inline;
-		}
-
-		a {
-			color: #B4C9D1;
-			cursor: pointer;
-			font-weight: 400;
-			margin-right: rem-calc(20);
-		}
-
-		a:hover {
-			color: #fff;
-		}
-
-		#stargazers {
-			:before {
-				content: "\f09b";
-				font-family: FontAwesome;
-				font-style: normal;
-				font-weight: normal;
-				text-decoration: inherit;
-				color: #B4C9D1;
-				margin-right: rem-calc(8);
-			}
-		}
-
-		#twitter {
-			:before {
-				content: "\f099";
-				font-family: FontAwesome;
-				font-style: normal;
-				font-weight: normal;
-				text-decoration: inherit;
-				color: #B4C9D1;
-				margin-right: rem-calc(8);
-			}
-		}
-
+		height: rem-calc(350);
+		margin: 0;
 	}
 
 	.tagline {
 
+		background:rgba(238,238,238,0.93);
+		
 		@include breakpoint(small) {
-			@include grid-column(8);
+			@include grid-column(8,0);
+			padding:1em;
 		}
 
 		@include breakpoint(medium) {
-			@include grid-column(5);
-			padding-top: 6rem;
+			@include grid-column(5,0);
+			padding:2em;
+			min-width:rem-calc(450);
 		}
 
 	}
 
 	h1 {
-		color: #fff;
-		font-weight: 500;
+		color: $primary-color;
+		font-weight: 700;
+		line-height:1.1;
+		letter-spacing:-0.02em;
 
 		@include breakpoint(small) {
 			font-size: 2.2rem;
@@ -105,44 +58,14 @@
 	}
 
 	h4 {
-		color: #fefefe;
+		color: $primary-color;
 		font-weight: 300;
 		font-size: 1.3125rem;
+		letter-spacing: -0.05em;
 	}
-
-	.download { margin-top: rem-calc(20); }
 
 }
 
-// Intro
-.intro {
-	@include grid-row();
-
-	.fp-intro {
-
-		@include breakpoint(small) {
-			@include grid-column(12);
-		}
-
-		@include breakpoint(medium) {
-			@include grid-column(10);
-			@include grid-column-offset(1);
-
-			h2 {
-				font-weight: 300;
-				margin-bottom: 1.5rem;
-			}
-
-			h4 {
-				font-size: 1.125rem;
-				line-height: 1.6;
-				color: #777;
-				margin-bottom: 2rem;
-			}
-
-		}
-	}
-}
 
 // Section divider
 .section-divider {
@@ -155,12 +78,27 @@
 	}
 }
 
+//contact
+.contact{
+	background-color:$primary-color;
+	padding:$band-spacing;
+	.contact-area{
+		@include grid-row();
+		text-align: center;
+		color:$white;
+		p	{
+			font-size:150%
+			}
+		}
+	}
 
-// Benefits
-.benefits {
+
+// Services
+.services {
 	@include grid-row();
 	text-align: center;
-
+	margin-top:$band-spacing;
+	margin-bottom:$band-spacing;
 	header {
 		@include grid-column(12);
 
@@ -175,37 +113,62 @@
 		}
 	}
 
-	.semantic,
-	.responsive,
-	.customizable,
-	.professional {
+	.service {
 		@include breakpoint(small) {
 			@include grid-column(12);
+			img {
+			width:35%;
+			}
 		}
 
 		@include breakpoint(medium) {
 			@include grid-column(3);
+			img{
+			min-width:rem-calc(120);
+			max-width:rem-calc(170);
+			}
 		}
 
 		img {
-			padding: 1.25rem;
-    	margin: 1rem auto 0 auto;
+		padding:$band-spacing 0 $band-spacing/2 0;
+    	margin: 0 auto;
+		}
+		
+		h3{
+		line-height: 1.1;
+		}
+		
+		li {
+		line-height: 1.1;
+		font-weight:bold;
+		color:#777;
+		margin-bottom:rem-calc(7);
 		}
 
-		h3 {
-			color: #0a0a0a;
-			font-weight: 300;
-			font-size: 1.75rem;
-		}
-
-		p { font-size: 0.9375rem; }
-
-	}
-
-	.why-foundation {
-		@include grid-row();
-		@include grid-column(12);
-		margin-top: 4rem;
 	}
 
 }
+
+.benefits {
+background-color:#eee;
+padding:$band-spacing;
+.benefits-area{
+	@include grid-row();
+	text-align: center;
+	p	{
+		line-height:1.4;
+		font-size:130%;
+		}
+	
+	}
+.benefit{
+		@include breakpoint(small) {
+			@include grid-column(12);
+			margin-bottom:rem-calc(20);
+		}
+
+		@include breakpoint(medium) {
+			@include grid-column(4);
+		}
+		}	
+	}
