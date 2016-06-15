@@ -88,9 +88,13 @@
 		text-align: center;
 		color:$white;
 		p	{
-			font-size:150%
+			@include breakpoint(medium) {
+			font-size: 150%;
 			}
+			}
+			
 		}
+		
 	}
 
 
@@ -137,13 +141,19 @@
 		
 		h3{
 		line-height: 1.1;
+			@include breakpoint(medium only) {
+			font-size: 1.3rem;
+			}
 		}
 		
 		li {
-		line-height: 1.1;
+		line-height: 1;
 		font-weight:bold;
 		color:#777;
-		margin-bottom:rem-calc(7);
+		margin-bottom:rem-calc(10);
+		@include breakpoint(medium only){
+			font-size:90%;
+			}
 		}
 
 	}
