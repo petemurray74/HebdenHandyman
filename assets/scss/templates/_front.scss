@@ -92,7 +92,11 @@
 			font-size: 150%;
 			}
 			}
-			
+		.shrinkemail{
+			@include breakpoint(450px down) {
+			font-size: 85%;
+			}
+			}
 		}
 		
 	}

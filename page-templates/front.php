@@ -57,7 +57,7 @@ get_header(); ?>
 <section class="contact">
 	<div class="contact-area">
 		<article class="large-12 columns"><h3>Contact Stef</strong></h3>			
-			<div><p>0774 360 4782 | 01422 847182 | <a href="mailto:info@hebdenhandyman.co.uk">info@hebdenhandyman.co.uk</a></p>
+			<div><p>0774 360 4782 <br> 01422 847182 <br> <a class="shrinkemail" href="mailto:info@hebdenhandyman.co.uk">info@hebdenhandyman.co.uk</a></p>
 			</div>
 		</article>
 	</div>	
